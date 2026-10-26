@@ -45,7 +45,7 @@ Add environment variables for the appropriate deployment environment:
 |---|---|---|
 | DATABASE_URL | Yes | Initialized hosted PostgreSQL connection URL with TLS |
 | NVIDIA_API_KEY | For live AI | Your private NVIDIA NIM key |
-| NVIDIA_MODEL | Optional | `meta/llama-3.1-70b-instruct` or another compatible enabled model |
+| NVIDIA_MODEL | Optional | `nvidia/nemotron-3.5-lightning-30b-a3b` or another compatible enabled model |
 | STMS_SECURE_COOKIE | Optional on Vercel | `1`; already enforced when VERCEL is set |
 
 Do not set STMS_DB or upload `data/stms.db` to Vercel. Do not add `STMS_ADMIN_PASSWORD` to Vercel unless you separately need an administrative initialization process there; normal function requests never bootstrap accounts.
@@ -77,4 +77,4 @@ If no key is configured, the planner clearly labels its output as a fixed non-AI
 ## Operational notes
 Use provider backup/snapshot tools for hosted data. Limit database credentials to this application's database. Login throttling is account-keyed and database-backed (10 attempts per five-minute window); AI generation allows 10 requests per signed-in tourist per hour. A failed provider request still counts toward that limit. Password recovery, formal accessibility/security audits and real travel/payment integrations remain outside this release.
 
-References: [Vercel Python runtime](https://vercel.com/docs/functions/runtimes/python), [Vercel storage and SQLite limitations](https://vercel.com/kb/guide/is-sqlite-supported-in-vercel), [NVIDIA NIM chat API](https://docs.api.nvidia.com/nim/reference/meta-llama-3_1-70b-infer).
+References: [Vercel Python runtime](https://vercel.com/docs/functions/runtimes/python), [Vercel storage and SQLite limitations](https://vercel.com/kb/guide/is-sqlite-supported-in-vercel), [NVIDIA NIM chat API](https://docs.api.nvidia.com/nim/reference/nvidia-nemotron-3-5-lightning-30b-a3b-infer).

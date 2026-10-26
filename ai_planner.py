@@ -7,7 +7,7 @@ import urllib.error
 import urllib.request
 
 ENDPOINT='https://integrate.api.nvidia.com/v1/chat/completions'
-DEFAULT_MODEL='meta/llama-3.1-70b-instruct'
+DEFAULT_MODEL='nvidia/nemotron-3.5-lightning-30b-a3b'
 
 
 class PlannerError(Exception): pass
@@ -19,6 +19,10 @@ def configuration():
 
 def call_nim(messages):
     payload={'model':configuration()['model'],'messages':messages,'temperature':0.4,'max_tokens':2200,'stream':False}
+    if 'nemotron' in payload['model'].lower():
+        # Nemotron defaults to reasoning; direct structured output keeps the
+        # itinerary within the request's time and output-token budgets.
+        payload['chat_template_kwargs']={'enable_thinking':False}
     request=urllib.request.Request(ENDPOINT,data=json.dumps(payload).encode(),headers={'Authorization':'Bearer '+os.environ['NVIDIA_API_KEY'],'Content-Type':'application/json','Accept':'application/json'},method='POST')
     try:
         with urllib.request.urlopen(request,timeout=22) as response:

@@ -8,6 +8,17 @@ import ai_planner
 
 
 class AIPlannerTests(IntegrationTestsBase):
+    def test_nim_transport_disables_thinking_and_keeps_key_in_header(self):
+        with patch.dict(os.environ,{'NVIDIA_API_KEY':'test-placeholder-not-a-real-key','NVIDIA_MODEL':'nvidia/nemotron-3.5-lightning-30b-a3b'}),patch('ai_planner.urllib.request.urlopen') as transport:
+            transport.return_value.__enter__.return_value.read.return_value=json.dumps({'choices':[{'message':{'content':'{"ok":true}'}}]}).encode()
+            self.assertEqual(ai_planner.call_nim([{'role':'user','content':'Test trip'}]),'{"ok":true}')
+            request=transport.call_args.args[0]
+            payload=json.loads(request.data)
+            self.assertFalse(payload['chat_template_kwargs']['enable_thinking'])
+            self.assertNotIn('test-placeholder-not-a-real-key',request.data.decode())
+            self.assertEqual(request.get_header('Authorization'),'Bearer test-placeholder-not-a-real-key')
+            self.assertEqual(transport.call_args.kwargs['timeout'],22)
+
     def preferences(self):
         return {'destination_id':1,'start_date':(dt.date.today()+dt.timedelta(days=10)).isoformat(),'days':2,'budget':10000,'guests':2,'interests':'Heritage and relaxed walks'}
 

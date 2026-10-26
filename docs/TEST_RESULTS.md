@@ -47,3 +47,13 @@ Executed 26 October 2026:
 - Static build `python scripts/build.py`, JavaScript syntax check and Python compile checks: passed.
 
 The PostgreSQL adapter disables named prepared statements to work with transaction poolers. Cloud credentials were not provided; a real Vercel deployment and live NVIDIA inference have not been performed. NVIDIA tests use mocked responses. Later network/sandbox changes blocked further local socket checks; the last completed full-suite results above remain the recorded evidence. The previously saved browser screenshot documents the original release; it is not evidence for the new AI view.
+
+
+## Live NVIDIA verification — 26 October 2026
+The owner-authorized NVIDIA key from Omen was configured in the ignored local .env. The original Llama endpoint was absent from the current NVIDIA model list. The app now defaults to nvidia/nemotron-3.5-lightning-30b-a3b and disables thinking for direct structured output, avoiding the earlier 22-second timeout.
+
+- Live provider request returned and validated a two-day Jaipur Heritage Escape in 4.20 seconds, mode ai.
+- Browser verification generated a three-day Backwater Escape and displayed NVIDIA NIM connected / Generated with NVIDIA NIM. Screenshot: nim-live.png.
+- Local server /api/ai/config confirmed configured=true and the Nemotron Lightning model ID without returning the key.
+- Full automated suite: **14 tests passed in 16.310 seconds**, including a new transport test for the non-reasoning payload and header-only key placement.
+- The key is excluded from Git, the downloadable ZIP and Vercel uploads. A real Vercel deployment still requires the owner's hosted PostgreSQL configuration and NVIDIA environment variable in Vercel.

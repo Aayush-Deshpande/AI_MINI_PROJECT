@@ -27,7 +27,7 @@ A fresh full seed contains **11 users, 12 destinations, 60 tours (48 upcoming an
 
 ## Enable Generative AI
 1. Copy `.env.example` to `.env` locally. Keep `DATABASE_URL` blank for SQLite and `STMS_SECURE_COOKIE=0` for local HTTP.
-2. Set `NVIDIA_API_KEY` in that private file. Optionally set `NVIDIA_MODEL`; the default is `meta/llama-3.1-70b-instruct`.
+2. Set `NVIDIA_API_KEY` in that private file. Optionally set `NVIDIA_MODEL`; the default is `nvidia/nemotron-3.5-lightning-30b-a3b`.
 3. Restart `python app.py`, sign in as a tourist, and open **AI planner ✦**.
 
 The server calls NVIDIA's hosted `/v1/chat/completions` endpoint. It sends travel preferences and public catalog descriptions, validates the structured response against catalog IDs, and lets the tourist save the result to their private itinerary. The key is never returned to the browser. Plans do not automatically reserve seats.
