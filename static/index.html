@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wanderly • Smart Tourist Management</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="#discover"><span class="brand-icon">W</span> wanderly<span class="brand-sub">SMART TOURISM</span></a><nav aria-label="Main navigation"><button data-view="discover">Discover</button><button data-view="planner">AI planner ✦</button><button data-view="trips">My trips</button><button data-view="reviews">Reviews</button><button data-view="support">Support</button><button data-view="operations" id="ops-nav" hidden>Operations</button></nav><div id="account"></div></header>
+<main id="main"></main>
+<div id="notice" role="status" aria-live="polite" hidden></div>
+<dialog id="auth"><form id="auth-form"><button type="button" class="close secondary" id="close-auth" aria-label="Close sign in">×</button><p class="eyebrow">YOUR NEXT CHAPTER</p><h2 id="auth-title">Welcome back.</h2><p class="muted">A little planning. A world of possibilities.</p><label id="name-label" hidden>Your name<input name="name" maxlength="100" autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="username" maxlength="254"></label><label>Password<input name="password" type="password" required minlength="10" maxlength="128" autocomplete="current-password"></label><button type="submit" id="auth-submit">Sign in</button><button type="button" class="secondary" id="toggle-auth">Create an account</button><p id="auth-error" role="alert"></p><details><summary>Local demo accounts</summary><p>tourist@stms.local<br>guide@stms.local<br>admin@stms.local</p><p>Password for each: <strong>Explore@12345</strong></p></details></form></dialog>
+<footer><a class="brand" href="#discover">wanderly.</a><p>Thoughtful journeys. Local stories. Lasting memories.</p><span>Local demonstration • INR • No payments collected</span></footer>
+</body></html>

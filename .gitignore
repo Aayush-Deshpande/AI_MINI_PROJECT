@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+data/
+backups/
+*.log
+.env
+.env.*
+!.env.example
+.venv/
+.vercel/
+public/

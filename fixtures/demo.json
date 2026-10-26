@@ -1,0 +1,55 @@
+{
+  "version": "wanderly-demo-v1",
+  "description": "Entirely fictional records for demonstrations. Dates are offsets from the seed date; prices are INR paise.",
+  "users": [
+    {"name":"Ayush","email":"tourist@stms.local","role":"tourist"},
+    {"name":"Priya Sharma","email":"guide@stms.local","role":"guide"},
+    {"name":"Administrator","email":"admin@stms.local","role":"admin"},
+    {"name":"Mira Kapoor","email":"mira@stms.local","role":"tourist"},
+    {"name":"Nikhil Rao","email":"nikhil@stms.local","role":"tourist"},
+    {"name":"Riya Sen","email":"riya@stms.local","role":"tourist"},
+    {"name":"Kabir Mehta","email":"kabir@stms.local","role":"tourist"},
+    {"name":"Ananya Das","email":"ananya@stms.local","role":"tourist"},
+    {"name":"Dev Malhotra","email":"dev@stms.local","role":"tourist"},
+    {"name":"Arjun Verma","email":"arjun.guide@stms.local","role":"guide"},
+    {"name":"Zoya Khan","email":"zoya.guide@stms.local","role":"guide"}
+  ],
+  "destinations": [
+    {"name":"Pink City Heritage","city":"Jaipur","category":"Heritage","description":"Explore sandstone palaces, vibrant bazaars and the architectural stories of Rajasthan.","price_paise":249900},
+    {"name":"Backwater Escape","city":"Alleppey","category":"Nature","description":"Slow down beside palm-lined canals and discover the landscapes of Kerala.","price_paise":349900},
+    {"name":"Himalayan Trails","city":"Manali","category":"Adventure","description":"Discover mountain paths, cedar forests and dramatic valley views with a local guide.","price_paise":299900},
+    {"name":"Old City Food Walk","city":"Delhi","category":"Food","description":"Taste regional specialties and discover the streets and stories of Old Delhi.","price_paise":149900},
+    {"name":"Coastal Discovery","city":"Goa","category":"Beach","description":"Explore coastal villages, peaceful beaches and the distinctive heritage of Goa.","price_paise":199900},
+    {"name":"Lakeside Stories","city":"Udaipur","category":"Heritage","description":"Discover lakeside architecture, traditional craft and the history of the City of Lakes.","price_paise":229900},
+    {"name":"Ganga Sunrise Walk","city":"Varanasi","category":"Culture","description":"Walk the riverside lanes at sunrise and hear local stories of music, craft and daily life.","price_paise":129900},
+    {"name":"Tea Garden Getaway","city":"Munnar","category":"Nature","description":"Wander through rolling tea country, visit a local tea stop and enjoy misty hill views.","price_paise":279900},
+    {"name":"Desert Dunes Evening","city":"Jaisalmer","category":"Adventure","description":"Explore desert landscapes with a local guide and enjoy an evening of regional storytelling.","price_paise":329900},
+    {"name":"French Quarter Stroll","city":"Puducherry","category":"Culture","description":"Discover colourful streets, coastal architecture and the layered history of the French Quarter.","price_paise":159900},
+    {"name":"Temple Town Flavours","city":"Madurai","category":"Food","description":"Explore busy market streets and sample a fictional tasting itinerary inspired by Tamil cuisine.","price_paise":139900},
+    {"name":"Island Shoreline Trail","city":"Port Blair","category":"Beach","description":"Enjoy a gentle shoreline discovery walk, coastal viewpoints and stories of island life.","price_paise":399900}
+  ],
+  "reviews": [
+    {"rating":5,"comment":"A thoughtful route through the old city. Our guide made the architecture easy to appreciate."},
+    {"rating":5,"comment":"Peaceful scenery and a relaxed pace. The local stories were a highlight."},
+    {"rating":4,"comment":"Beautiful mountain views and a knowledgeable guide. Wear comfortable walking shoes."},
+    {"rating":5,"comment":"A fun introduction to the neighbourhood and its food traditions."},
+    {"rating":4,"comment":"A lovely coastal day with plenty of time to explore and ask questions."},
+    {"rating":5,"comment":"The lakeside stops were memorable and the craft stories added context."},
+    {"rating":5,"comment":"An atmospheric morning walk with sensitive and engaging storytelling."},
+    {"rating":4,"comment":"Fresh air, green hills and a good balance of walking and breaks."},
+    {"rating":4,"comment":"Wonderful desert colours. The itinerary was clear and well organised."},
+    {"rating":5,"comment":"Loved the architecture and the quieter streets on this guided stroll."},
+    {"rating":4,"comment":"A lively market route and a delicious introduction to regional flavours."},
+    {"rating":5,"comment":"The shoreline views were outstanding. A relaxed and enjoyable experience."}
+  ],
+  "tickets": [
+    {"subject":"Meeting point for Jaipur departure","message":"Could you confirm where the group meets before the heritage walk?","response":"Demo response: meet at the location shared by your assigned guide before departure."},
+    {"subject":"Dietary preference on food walk","message":"I would prefer vegetarian tasting options. Can this be noted?","response":"Demo response: your preference has been noted for the guide."},
+    {"subject":"Change in travel plans","message":"I may need to cancel a future reservation. Where can I do this?","response":"Use My trips and choose Cancel reservation before the departure date."},
+    {"subject":"What should I pack?","message":"Are walking shoes suitable for the mountain route?","response":"Demo response: comfortable walking shoes and weather-appropriate layers are suggested."},
+    {"subject":"Group arrival question","message":"Our group may arrive separately. Can we join at the same meeting point?","response":""},
+    {"subject":"Itinerary planning help","message":"Can I add multiple stops on the same day to my personal itinerary?","response":""},
+    {"subject":"Accessibility information request","message":"Please share more detail about walking surfaces and the expected pace.","response":""},
+    {"subject":"Guide introduction","message":"How can I identify my assigned guide on the day of the tour?","response":""}
+  ]
+}
